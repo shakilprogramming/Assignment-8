@@ -7,24 +7,24 @@ const BookDetails = () => {
     const book = useLoaderData();
     const navigate = useNavigate();
     
-    // State to track if the book is already in Read/Wishlist
+    
     const [isReadAdded, setIsReadAdded] = useState(false);
     const [isWishlistAdded, setIsWishlistAdded] = useState(false);
 
     const handleRead = () => {
-        // Get existing read books from local storage
+        
         const existingReadBooks = JSON.parse(localStorage.getItem('readBooks')) || [];
         const isAlreadyAdded = existingReadBooks.some(b => b.bookId === book.bookId);
 
         if (!isAlreadyAdded) {
-            // Add to read books and update local storage
+            
             existingReadBooks.push(book);
             localStorage.setItem('readBooks', JSON.stringify(existingReadBooks));
             toast.success("Successfully added to Read list!", {
                 position: "top-right",
                 autoClose: 2000,
             });
-            setIsReadAdded(true); // Set as added
+            setIsReadAdded(true); 
         } else {
             toast.error("Already added to Read list!", {
                 position: "top-right",
@@ -34,19 +34,19 @@ const BookDetails = () => {
     };
 
     const handleWishlist = () => {
-        // Get existing wishlist books from local storage
+      
         const existingWishlistBooks = JSON.parse(localStorage.getItem('wishlistBooks')) || [];
         const isAlreadyAdded = existingWishlistBooks.some(b => b.bookId === book.bookId);
 
         if (!isAlreadyAdded) {
-            // Add to wishlist and update local storage
+            
             existingWishlistBooks.push(book);
             localStorage.setItem('wishlistBooks', JSON.stringify(existingWishlistBooks));
             toast.success("Successfully added to Wishlist!", {
                 position: "top-right",
                 autoClose: 2000,
             });
-            setIsWishlistAdded(true); // Set as added
+            setIsWishlistAdded(true);
         } else {
             toast.error("Already added to Wishlist!", {
                 position: "top-right",
@@ -105,7 +105,7 @@ const BookDetails = () => {
                     <button onClick={handleWishlist} className="px-4 py-2 bg-[#50B1C9] text-white rounded">
                         Wishlist
                     </button>
-                    {/* <button onClick={handleApplyJob}> buton</button> */}
+                   
                 </div>
                 <ToastContainer />
             </div>

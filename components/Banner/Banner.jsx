@@ -1,11 +1,11 @@
-// Banner.jsx
+
 import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
     const navigate = useNavigate();
 
     const handleViewListClick = () => {
-        navigate('/listed-books'); // Navigate to Listed Books page
+        navigate('/listed-books'); 
     };
 
     return (
@@ -22,7 +22,7 @@ const Banner = () => {
                             fontSize: '20px',
                             padding: '5px 5px'
                         }}
-                        onClick={handleViewListClick} // Add onClick handler
+                        onClick={handleViewListClick} 
                     >
                         View the list
                     </button>

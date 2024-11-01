@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Cell } from 'recharts';
 
 const data = [
@@ -10,7 +10,7 @@ const data = [
   { name: "The Silent Patient", totalPages: 336, rating: 4.3, yearOfPublishing: 2019 }
 ];
 
-// Custom Tooltip with book info
+
 function getBookInfo(label) {
   const book = data.find(b => b.name === label);
   return book ? `${book.name} - ${book.yearOfPublishing} (${book.totalPages} pages)` : '';
@@ -30,7 +30,6 @@ function CustomTooltip({ payload, label, active }) {
   return null;
 }
 
-// Custom bar shape
 const TriangleBar = (props) => {
   const { x, y, width, height, fill } = props;
   return (
@@ -41,7 +40,6 @@ const TriangleBar = (props) => {
   );
 };
 
-// Main Chart Component
 const LineChart = () => (
   <BarChart width={1100} height={600} data={data}>
     <XAxis dataKey="name" />

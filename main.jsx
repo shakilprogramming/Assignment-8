@@ -31,7 +31,7 @@ const router = createBrowserRouter([
         path: '/book/:id',
         element: <BookDetails />,
         loader: async ({ params }) => {
-          const response = await fetch('/jobs.json'); // Ensure the correct path
+          const response = await fetch('/jobs.json'); 
           const books = await response.json();
           return books.find(book => book.bookId === parseInt(params.id, 10));
         },

@@ -10,11 +10,11 @@ const ListedBooksPage = () => {
     const [activeTab, setActiveTab] = useState("Read");
     const [readBooks, setReadBooks] = useState([]);
     const [wishlistBooks, setWishlistBooks] = useState([]);
-    const [sortBy, setSortBy] = useState("bookName"); // Default sorting field
+    const [sortBy, setSortBy] = useState("bookName"); 
     const navigate = useNavigate();
 
     useEffect(() => {
-        // Load books from local storage when the component mounts
+       
         const storedReadBooks = JSON.parse(localStorage.getItem('readBooks')) || [];
         const storedWishlistBooks = JSON.parse(localStorage.getItem('wishlistBooks')) || [];
 
@@ -22,19 +22,19 @@ const ListedBooksPage = () => {
         setWishlistBooks(storedWishlistBooks);
     }, []);
 
-    // Function to handle sorting
+    
     const handleSort = (books) => {
         return books.sort((a, b) => {
-            if (a[sortBy] < b[sortBy]) return 1; // For descending order
-            if (a[sortBy] > b[sortBy]) return -1; // For descending order
+            if (a[sortBy] < b[sortBy]) return 1; 
+            if (a[sortBy] > b[sortBy]) return -1; 
             return 0;
         });
     };
 
-    const sortedReadBooks = handleSort([...readBooks]); // Copy and sort read books
-    const sortedWishlistBooks = handleSort([...wishlistBooks]); // Copy and sort wishlist books
+    const sortedReadBooks = handleSort([...readBooks]); 
+    const sortedWishlistBooks = handleSort([...wishlistBooks]);
 
-    // Function to navigate to Book Details page with bookId
+  
     const goToDetailsPage = (bookId) => {
         navigate(`/book/${bookId}`);
     };
@@ -44,7 +44,7 @@ const ListedBooksPage = () => {
             <ToastContainer />
             <h1 className="text-3xl font-bold mb-4">Listed Books</h1>
 
-            {/* Toggle Buttons */}
+           
             <div className="flex gap-4 mb-6">
                 <button
                     className={`px-4 py-2 ${activeTab === "Read" ? "bg-blue-500 text-white" : "bg-gray-200"} rounded`}
@@ -60,7 +60,7 @@ const ListedBooksPage = () => {
                 </button>
             </div>
 
-            {/* Sort By Dropdown */}
+           
             <div className="mb-4">
                 <label htmlFor="sortBy" className="mr-2">Sort By:</label>
                 <select
@@ -76,7 +76,7 @@ const ListedBooksPage = () => {
                 </select>
             </div>
 
-            {/* Conditional Rendering of Books */}
+            
             <div className="bg-gray-50 shadow-lg p-4 rounded-lg">
                 {activeTab === "Read" && (
                     <>

@@ -1,11 +1,11 @@
-// Header.jsx
+
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
     const links = (
         <>
             <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/listed-books">Listed Books Page</NavLink></li> {/* Match the route here */}
+            <li><NavLink to="/listed-books">Listed Books Page</NavLink></li> 
             <li><NavLink to="/applied">Pages to Read</NavLink></li>
             <li><NavLink to="/statistics">Statistics</NavLink></li>
             <li><NavLink to="/blogs">Blog</NavLink></li>
