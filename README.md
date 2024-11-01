@@ -4,3 +4,5 @@ Website connect with react route
 Website has mobile responsibile
 Build with tailwind
 tailwind use
+daisyui
+html
