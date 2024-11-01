@@ -7,3 +7,4 @@ tailwind use
 daisyui
 html
 sever connect
+icons
