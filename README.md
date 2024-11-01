@@ -6,3 +6,4 @@ Build with tailwind
 tailwind use
 daisyui
 html
+sever connect
