@@ -1,15 +1,7 @@
-#User
-This is my first react apps 
-This is a ecomrence website
-#React
-Website connect with react route
-Website has mobile responsibile
-#Tailwind 
-Build with tailwind
-tailwind use
-#Daisyui
-daisyui
-#html
-html
-sever connect
-icons
+## Features
+
+* Feature 1: Html 
+* Feature 2: Tailwind
+* Feature 3: Daisyui
+* Feature 4: js
+* Feature 5: React 
