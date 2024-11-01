@@ -12,7 +12,7 @@ const Banner = () => {
         <div className="card lg:card-side bg-base-100 shadow-xl mt-10">
             <div className="card-body">
                 <h2 className="card-title text-5xl">Books to freshen up</h2>
-                <h2 className="card-title text-5xl text-black">your bookshelf</h2>
+                <h2 className="card-title text-5xl text-black">yours bookshelf</h2>
                 <div className="card-actions justify-start mt-10">
                     <button
                         className="btn btn-primary bg-[#23BE0A] text-white"
